@@ -1,0 +1,41 @@
+
+  ion-toolbar{
+      --background :rgb(246, 250, 8);
+  }
+  ion-input{
+    --placeholder-color:blue; 
+    // --placeholder-font-weight:bold;
+    
+  }
+  a{
+      cursor: pointer;
+  }
+ 
+ion-grid {
+    width:100%;
+    height: 100%;
+    background: rgb(246, 246, 246);
+}
+ion-title{
+    text-align: center;
+  }
+
+ion-row {
+    height: 100%;
+}
+
+ion-col {
+    // border: 1px solid #488aff;
+//   background:green;
+}
+ion-button {
+    margin-left: 80px;  
+    width:50%;                                                                                                      
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    
+    ion-col {
+        border: none;
+    }
+}
