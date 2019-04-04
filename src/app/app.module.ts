@@ -14,12 +14,14 @@ import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
 import { OffersComponent } from './offers/offers.component';
+import { PaymentComponent } from './payment/payment.component';
+import { SuccessComponent } from './success/success.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http'
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent,LoginComponent,RegisterComponent,ForgotpwdComponent,BookingComponent,OffersComponent],
+  declarations: [AppComponent,HomeComponent,LoginComponent,SuccessComponent,RegisterComponent,PaymentComponent,ForgotpwdComponent,BookingComponent,OffersComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule,HttpModule],
   providers: [

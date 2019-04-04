@@ -1,6 +1,4 @@
 
-
-
   ion-toolbar{
     --background :rgb(246, 250, 8);
 }
@@ -18,11 +16,13 @@ ion-grid {
   height: 100%;
   background: rgb(246, 246, 246);
 }
-
+ion-title{
+  text-align: center;
+}
 ion-row {
   height: 100%;
 }
-ion-title{
+img{
   text-align: center;
 }
 
@@ -31,12 +31,8 @@ ion-col {
 //   background:green;
 }
 ion-button {
- text-align: center; 
-  width:40%; 
-  margin-left: 10px;                                                                                                     
-}
-ion-card-subtitle{
-  float: right;
+  margin-left: 80px;  
+  width:50%;                                                                                                      
 }
 
 @media (min-width: 240px) and (max-width: 768px) {
@@ -45,4 +41,3 @@ ion-card-subtitle{
       border: none;
   }
 }
-

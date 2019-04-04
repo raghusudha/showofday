@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Search
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-searchbar></ion-searchbar>
+    
+        <ion-grid>
+          <ion-row>
+            
+              <ion-col size="6"  *ngFor="let movie of list">
+      
+         <!-- <ion-icon name="film"></ion-icon>{{ movie.name }} -->
+        
+          
+            <!-- <ion-icon name="calendar"></ion-icon> {{ movie.year }} <br> -->
+         <img style="height:250px;width:100%" src="{{ movie.image_url }}" (click)="onSelect(movie)"/>
+         
+              <!-- <ion-icon name="film"></ion-icon>{{ movie.production_house }}<br> 
+              <ion-icon name="star-half"></ion-icon>{{ movie.rating }}<br> 
+              <ion-icon name="pin"></ion-icon>{{ movie.type }}<br> 
+              <ion-icon name="pulse"></ion-icon>{{ movie.language}}<br> 
+              <ion-icon name="calendar"></ion-icon>{{ movie.date }}<br> -->
+        
+          <!-- <ion-button color="success" (click)="onBooking()">BOOK</ion-button> -->
+                <!-- <ion-button color="warning" (click)="onOffers()">OFFERS</ion-button> -->
+                
+                
+                
+            
+          </ion-col>
+        
+        <br>
+        </ion-row>
+      </ion-grid>
+       
+      
+</ion-content>

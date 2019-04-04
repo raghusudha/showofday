@@ -1,11 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      
-        <h2>BookMovie</h2>
-    </ion-title>
+    <ion-icon name="arrow-round-back" (click)="onBack()" style="font-size:28px;font-weight:bold;"></ion-icon>
+        <ion-title>Booking</ion-title>
   </ion-toolbar>
 </ion-header>
+
+
+ 
 
 
 <ion-content>
@@ -19,7 +20,7 @@
           <ion-label position="floating">No. Of Tickets</ion-label>
           <ion-input [(ngModel)]="data.tickets"></ion-input>
       </ion-item><br>
-      <ion-button color="success" (click)="addBooking(movie,data.tickets)">Book Ticket</ion-button>
+      <ion-button color="success" expand="full" routerLink="/payment"  (click)="addBooking(movie,data.tickets)">Book Ticket</ion-button>
     </ion-card>
   </ion-content>
   

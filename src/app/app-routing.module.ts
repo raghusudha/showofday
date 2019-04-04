@@ -6,14 +6,18 @@ import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
 import { OffersComponent } from './offers/offers.component';
+import { PaymentComponent } from './payment/payment.component';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
   {path:'forgotpwd', component:ForgotpwdComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
-  {path:'booking', component:BookingComponent},
+  {path:'success', component:SuccessComponent},
+  // {path:'booking', component:BookingComponent},
   {path:'offers', component:OffersComponent},
   {path:'home', component:HomeComponent},
+  {path:'payment', component:PaymentComponent},
   {path:'booking/:id', component:BookingComponent},
   { path:'', redirectTo:'home', pathMatch:'full'},
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }

@@ -20,16 +20,17 @@ export class BookingComponent implements OnInit {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
     this.id = +params['id']; // (+) converts string 'id' to a number
-       console.log("id is "+this.id);
+      //  console.log("id is "+this.id);
        this.movieService.getMovieById(this.id).subscribe((movie)=>{
          this.movie=movie.result;
-         console.log(this.movie);
+        //  console.log(this.movie);
        })
     });
   }
+  
   amount=this.data.tickets*50
   addBooking(movie,t){
-    console.log(movie,t);
+    
     var movies={
     customer_id:2,
     tickets:t,
@@ -44,9 +45,12 @@ export class BookingComponent implements OnInit {
     amount:this.amount,
     ticket_price:50
     }
-    console.log('data sent====>',this.addBooking)
-    this.movieService.addBooking(movies).subscribe((e)=>{console.log(JSON.stringify(e));
-    this.router.navigate(['./offers'])
+    // console.log('data sent====>',this.addBooking);
+    this.movieService.addBooking(movies).subscribe((e)=>{(JSON.stringify(e));
+    this.router.navigate(['./payment']);
     });
+ }
+ onBack(){
+  this.router.navigate(['/tabs']);
  }
 }

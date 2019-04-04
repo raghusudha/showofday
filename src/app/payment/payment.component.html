@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" (click)="onBack()" style="font-size:28px;font-weight:bold;"></ion-icon>
+        <ion-title>Make Payment</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+      
+      <div padding>
+          <ion-card>
+                <ion-item>
+                  <ion-input type="text" placeholder="Enter Debit Card"></ion-input>
+                </ion-item>
+              </ion-card>
+              <ion-card>
+                  <ion-item>
+                    <ion-input type="text" placeholder="Enter month/Year"></ion-input>
+                  </ion-item>
+                </ion-card>
+          </div>
+          <div padding>
+              <ion-button color="success" (click)="onPay()">PAY</ion-button>
+              </div>
+          
+          
+          </ion-grid>
+          </ion-content>

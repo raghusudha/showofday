@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-title>
-          <h2>List of Movies</h2>
+          <b>Home</b>
       </ion-title>
     
     </ion-toolbar>
@@ -11,7 +11,11 @@
   <ion-content>
     <ion-grid>
       <ion-row>
-        
+        <ion-card>
+            <ion-slides autoplay="5000" loop="true" speed="500" pager="true" (ionSlideDidChange)="slideChanged()">
+
+          <img src="assets/s4.jpg">
+        </ion-card>
           <ion-col size="6"  *ngFor="let movie of list">
   
      <!-- <ion-icon name="film"></ion-icon>{{ movie.name }} -->
