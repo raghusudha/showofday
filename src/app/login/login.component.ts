@@ -28,18 +28,24 @@ export class LoginComponent implements OnInit {
     this.movieService.getRemoteCustomers().subscribe((result)=>(this.customers=result));
   }
 onLogin(customer){
-  // this.movieService.authenticate(customer).subscribe((result)=>{console.log(result);
-
-    if((customer.email)&&(customer.password)){
-      this.router.navigate(['/tabs']);
-     }
-    else{
+  
+for(var i=0;i<this.customers.length;i++) {
+    if((customer.email==this.customers[i].email) && (customer.password == this.customers[i].password)){
+    console.log(customer);
+    this.router.navigate(['/tabs/tab1']);
+    if (localStorage.getItem('user')==null)
+    {
+    localStorage.setItem('user', JSON.stringify(customer)); 
+    }
+    }
+    else {
       this.presentAlert();
-      this.email="email";
-      this.password="password";
-     
-
-      }
+          this.email="email";
+          this.password="password";
+    }
+    break;
+    }
+   
     }
     async presentAlert() {
       const alert = await this.alertController.create({

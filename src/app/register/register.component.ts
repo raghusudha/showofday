@@ -19,7 +19,8 @@ customer={};
       
       this.router.navigate(['/tabs']);
     });
-  
-  
-  }
+ }
+ onBack(){
+  this.router.navigate(['/home']);
+ }
 }

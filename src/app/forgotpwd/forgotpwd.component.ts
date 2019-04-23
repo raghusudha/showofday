@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import MovieService from '../movie.service';
 
 @Component({
   selector: 'app-forgotpwd',
@@ -7,15 +8,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgotpwd.component.scss'],
 })
 export class ForgotpwdComponent implements OnInit {
+  customer = {phone:''};
+  password: any = {};
+  constructor(private router: Router, private movieService: MovieService) { }
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {}
-  onVerify(){
-    this.router.navigate(['./login']);
+  ngOnInit() { }
+  reset() {
+    this.movieService.getRemoteCustomerPassword(this.customer.phone).subscribe((customer) => {
+      this.password = customer;
+      console.log(customer);
+      alert('This is Your PassWord:' + this.password[0].password);
+    });
   }
-  onBack(){
-    this.router.navigate(['./login']);
-   }
 
+  forget() {
+    this.router.navigate(['/forgetpassword']);
+  }
+  register() {
+    this.router.navigate(['/register']);
+  }
+  onBack() {
+    this.router.navigate(['/login']);
+  }
 }
+
+
+

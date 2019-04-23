@@ -5,26 +5,26 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <ion-grid>
-    <ion-row justify-content-center>
-      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-          <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="60000"
-          pager="true">
-          <ion-slide style="height:200px;" *ngFor="let banner of sliders">
-            <img src={{banner.image}}>
-          </ion-slide>
-        </ion-slides>
-        <div padding>
-          <a href="https://www.facebook.com/"> <img src="assets/a1.png"></a>
-          <a href="https://www.youtube.com/"> <img src="assets/a2.png"></a>
-          <a href="https://twitter.com/"> <img src="assets/a3.png"></a>
-        </div>
-        <div padding>
-          <ion-button size="large" shape="round" color="primary" (click)="onSignup()">SIGN UP</ion-button>
-          <ion-button size="large" shape="round" color="success" (click)="onSignin()">SIGN IN</ion-button>
-        </div>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+ 
+    <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="60000"
+      pager="true">
+      <ion-slide style="height:300px;" *ngFor="let banner of sliders">
+        <img src={{banner.image}}>
+      </ion-slide>
+    </ion-slides>
+  
+  
+  <ion-card>
+      <a href="https://www.facebook.com/">
+      <ion-icon name="logo-facebook" style="font-size:55px;color:blue"></ion-icon></a>
+      <a href="https://www.youtube.com/"> 
+      <ion-icon name="logo-youtube" style="font-size:50px;color:red"></ion-icon></a>
+      <a href="https://twitter.com/"><i class="fa fa-twitter" style="margin-left:60px;font-size:50px;color:blue" aria-hidden="true"></i></a>
+      <div padding>
+      <ion-button size="large" shape="round" color="primary" (click)="onSignup()">SIGN UP</ion-button>
+      <ion-button size="large" shape="round" color="success" (click)="onSignin()">SIGN IN</ion-button>
+</div>
+  </ion-card>
 </ion-content>

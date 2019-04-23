@@ -44,6 +44,10 @@ bookings:any={customer_id:100,tickets:2,movie_id:355767778,movie_name:"arya",mov
    return this.http.get<[]>(this.customerUrl);
 
  }
+ getRemoteCustomerPassword(phone):Observable<any>{
+  return this.http.get<[]>(this.customerUrl+'/'+phone);     
+
+}
  
  authenticate(customer){
   return this.http.post(this.customerUrl,customer);

@@ -1,48 +1,49 @@
 <ion-header>
-        <ion-toolbar>
-          <ion-title>
-              <h2><ion-icon name="contact"></ion-icon> New User</h2>
-          </ion-title>
-        </ion-toolbar>
-      </ion-header>
-      
-      <ion-content>
-     
-          <ion-row justify-content-center>
-           <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-              <div padding>
-                  <ion-item>
-                    <ion-label position="floating">Enter Name</ion-label>
-                        <ion-input type="text"  [(ngModel)]="customer.name"></ion-input>
-                      </ion-item>
-                      
-            <ion-item>
-                    <ion-label position="floating">Enter password</ion-label>
-                  <ion-input type="password"  [(ngModel)]="customer.password"></ion-input>
-                </ion-item>
-                
-              
-              <ion-item>
-                  <ion-label position="floating">Enter Address</ion-label>
-                <ion-input type="text"  [(ngModel)]="customer.address"></ion-input>
-              </ion-item>
-             
-      
-             
-                <ion-item>
-                    <ion-label position="floating">Enter Email</ion-label>
-                  <ion-input type="text"  [(ngModel)]="customer.email"></ion-input>
-                </ion-item>
-               
-                    <ion-item>
-                        <ion-label position="floating">Enter Mobile  Number</ion-label>
-                      <ion-input type="text"  [(ngModel)]="customer.phone"></ion-input>
-                    </ion-item>
-                    
-            </div>
-        <ion-button color="tertiary" (click)="onRegister(customer)">REGISTER</ion-button>
-      </ion-col>
-      </ion-row>
-     
-      </ion-content>
-      
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" (click)="onBack()" style="font-size:28px;font-weight:bold;"></ion-icon>
+
+    <ion-title>
+      <ion-icon name="contact"></ion-icon> New User
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row justify-content-center>
+    <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+      <div padding>
+        <ion-item>
+          <ion-label position="floating">Enter Name</ion-label>
+          <ion-input type="text" [(ngModel)]="customer.name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Enter password</ion-label>
+          <ion-input type="password" [(ngModel)]="customer.password"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label position="floating">Enter Address</ion-label>
+          <ion-input type="text" [(ngModel)]="customer.address"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+          <ion-label position="floating">Enter Email</ion-label>
+          <ion-input type="text" [(ngModel)]="customer.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Enter Mobile Number</ion-label>
+          <ion-input type="text" [(ngModel)]="customer.phone"></ion-input>
+        </ion-item>
+
+      </div>
+      <ion-button color="tertiary" (click)="onRegister(customer)">REGISTER</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

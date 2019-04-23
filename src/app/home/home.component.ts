@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   constructor(private router:Router) {
     this.sliders = [{image: "../../assets/home2.jpg"},
   {image: "../../assets/home3.jpg"},
-  { image: "../../assets/home.png" }];
+  ];
  }
 
   ngOnInit() {}
@@ -27,5 +27,4 @@ slidesDidLoad(myslides) {
 slidesDidLoad1(mslides) {
   mslides.startAutoplay();
 }
-
 }
