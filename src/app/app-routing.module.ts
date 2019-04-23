@@ -5,7 +5,6 @@ import { LoginComponent } from './login/login.component';
 import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
-import { OffersComponent } from './offers/offers.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SuccessComponent } from './success/success.component';
 
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'success', component:SuccessComponent},
   // {path:'booking', component:BookingComponent},
-  {path:'offers', component:OffersComponent},
   {path:'home', component:HomeComponent},
   {path:'payment', component:PaymentComponent},
   {path:'booking/:id', component:BookingComponent},

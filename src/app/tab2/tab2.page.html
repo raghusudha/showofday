@@ -1,42 +1,82 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Search
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-searchbar></ion-searchbar>
-    
-        <ion-grid>
-          <ion-row>
-            
-              <ion-col size="6"  *ngFor="let movie of list">
+    <ion-toolbar>
+      <ion-title>
+          <ion-title>Offers</ion-title>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
       
-         <!-- <ion-icon name="film"></ion-icon>{{ movie.name }} -->
-        
-          
-            <!-- <ion-icon name="calendar"></ion-icon> {{ movie.year }} <br> -->
-         <img style="height:250px;width:100%" src="{{ movie.image_url }}" (click)="onSelect(movie)"/>
-         
-              <!-- <ion-icon name="film"></ion-icon>{{ movie.production_house }}<br> 
-              <ion-icon name="star-half"></ion-icon>{{ movie.rating }}<br> 
-              <ion-icon name="pin"></ion-icon>{{ movie.type }}<br> 
-              <ion-icon name="pulse"></ion-icon>{{ movie.language}}<br> 
-              <ion-icon name="calendar"></ion-icon>{{ movie.date }}<br> -->
-        
-          <!-- <ion-button color="success" (click)="onBooking()">BOOK</ion-button> -->
-                <!-- <ion-button color="warning" (click)="onOffers()">OFFERS</ion-button> -->
-                
-                
-                
-            
-          </ion-col>
-        
-        <br>
-        </ion-row>
-      </ion-grid>
-       
+      <ion-content>
+      <ion-img src="../../assets/offer.jpg"></ion-img>
       
-</ion-content>
+      <ion-card>
+      <ion-item>
+      <ion-avatar slot="start">
+      <ion-img src="../../assets/offer1.jpeg" width="100%" height="130"></ion-img>
+      </ion-avatar>
+      <ion-label>CINEMA150<br> 19 DEC 2018 - 19 MAR 2018 <br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      </ion-label>
+      </ion-item>
+      </ion-card>
+      <ion-card>
+      <ion-item>
+      <ion-avatar slot="start">
+          <ion-img src="../../assets/off3.jpg" width="100%" height="130"></ion-img>
+      </ion-avatar>
+      <ion-label>STNT299<br> 19 DEC 2018 - 19 AUG 2018 <br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      </ion-label>
+      </ion-item>
+      </ion-card>
+      <ion-card>
+      <ion-item>
+      <ion-avatar slot="start">
+          <ion-img src="../../assets/hdfc.png" width="100%" height="130"></ion-img>
+      </ion-avatar>
+      <ion-label>HDFC123<br> 19 DEC 2018 - 19 MAR 2018 <br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      </ion-label>
+      </ion-item>
+      </ion-card> 
+      <ion-card>
+      <ion-item>
+      <ion-avatar slot="start">
+          <ion-img src="../../assets/kotak.jpg" width="100%" height="130"></ion-img>
+      </ion-avatar>
+      <ion-label>KOT345<br> 19 DEC 2018 - 19 MAR 2018 <br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      </ion-label>
+      </ion-item>
+      </ion-card>
+      <ion-card>
+      <ion-item>
+      <ion-avatar slot="start">
+          <ion-img src="../../assets/off4.jpg" width="100%" height="130"></ion-img>
+      </ion-avatar>
+      <ion-label>MNG0977<br> 19 DEC 2018 - 19 MAR 2018 <br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+      <ion-icon name="star-outline"></ion-icon>
+      </ion-label>
+      </ion-item>

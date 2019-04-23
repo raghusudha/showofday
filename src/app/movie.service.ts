@@ -45,7 +45,9 @@ bookings:any={customer_id:100,tickets:2,movie_id:355767778,movie_name:"arya",mov
 
  }
  
-
+ authenticate(customer){
+  return this.http.post(this.customerUrl,customer);
+}
 
 
 

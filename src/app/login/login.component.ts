@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
     this.movieService.getRemoteCustomers().subscribe((result)=>(this.customers=result));
   }
 onLogin(customer){
-  
+  // this.movieService.authenticate(customer).subscribe((result)=>{console.log(result);
+
     if((customer.email)&&(customer.password)){
       this.router.navigate(['/tabs']);
      }
@@ -36,6 +37,7 @@ onLogin(customer){
       this.presentAlert();
       this.email="email";
       this.password="password";
+     
 
       }
     }

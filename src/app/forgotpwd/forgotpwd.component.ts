@@ -14,5 +14,8 @@ export class ForgotpwdComponent implements OnInit {
   onVerify(){
     this.router.navigate(['./login']);
   }
+  onBack(){
+    this.router.navigate(['./login']);
+   }
 
 }

@@ -7,8 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  sliders:any = [];
+  constructor(private router:Router) {
+    this.sliders = [{image: "../../assets/home2.jpg"},
+  {image: "../../assets/home3.jpg"},
+  { image: "../../assets/home.png" }];
+ }
 
   ngOnInit() {}
   onSignup(){
@@ -17,4 +21,11 @@ export class HomeComponent implements OnInit {
 onSignin(){
   this.router.navigate(['./login']);
 }
+slidesDidLoad(myslides) {
+  myslides.startAutoplay();
+}
+slidesDidLoad1(mslides) {
+  mslides.startAutoplay();
+}
+
 }
