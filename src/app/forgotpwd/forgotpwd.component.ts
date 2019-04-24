@@ -16,8 +16,8 @@ export class ForgotpwdComponent implements OnInit {
   reset() {
     this.movieService.getRemoteCustomerPassword(this.customer.phone).subscribe((customer) => {
       this.password = customer;
-      console.log(customer);
-      alert('This is Your PassWord:' + this.password[0].password);
+    
+      alert(' Your PassWord:' + this.password[0].password);
     });
   }
 

@@ -13,6 +13,9 @@ import { LoginComponent } from './login/login.component';
 import { ForgotpwdComponent } from './forgotpwd/forgotpwd.component';
 import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
+import { CompletedComponent } from './completed/completed.component';
+import { CancelledComponent } from './cancelled/cancelled.component';
+
 
 import { PaymentComponent } from './payment/payment.component';
 import { SuccessComponent } from './success/success.component';
@@ -21,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {HttpModule} from '@angular/http'
 
 @NgModule({
-  declarations: [AppComponent,HomeComponent,LoginComponent,SuccessComponent,RegisterComponent,PaymentComponent,ForgotpwdComponent,BookingComponent],
+  declarations: [AppComponent,HomeComponent,LoginComponent,CompletedComponent,CancelledComponent,SuccessComponent,RegisterComponent,PaymentComponent,ForgotpwdComponent,BookingComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule,HttpModule],
   providers: [

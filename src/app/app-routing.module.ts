@@ -7,6 +7,8 @@ import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SuccessComponent } from './success/success.component';
+import { CompletedComponent } from './completed/completed.component';
+import { CancelledComponent } from './cancelled/cancelled.component';
 
 const routes: Routes = [
   {path:'forgotpwd', component:ForgotpwdComponent},
@@ -16,6 +18,9 @@ const routes: Routes = [
   // {path:'booking', component:BookingComponent},
   {path:'home', component:HomeComponent},
   {path:'payment', component:PaymentComponent},
+  {path:'completed', component:CompletedComponent},
+  {path:'completed', component:CompletedComponent},
+  {path:'cancelled', component:CancelledComponent},
   {path:'booking/:id', component:BookingComponent},
   { path:'', redirectTo:'home', pathMatch:'full'},
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }

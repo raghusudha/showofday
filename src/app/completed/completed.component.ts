@@ -1,13 +1,14 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import  MovieService  from '../movie.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-completed',
+  templateUrl: './completed.component.html',
+  styleUrls: ['./completed.component.scss'],
 })
-export class Tab3Page implements OnInit {
+export class CompletedComponent implements OnInit {
+
   constructor(private movieService:MovieService,private router:Router) {
   }
 
@@ -21,11 +22,10 @@ export class Tab3Page implements OnInit {
     });
     
   }
- 
-  onCancelled(){
-    this.router.navigate(['cancelled']);
-  }
-  onBookings(){
-    this.router.navigate(['completed']);
+  // completed(){
+  //   this.router.navigate(['completed']);
+  // }
+  onBack(){
+    this.router.navigate(['/tabs/tab3']);
   }
 }

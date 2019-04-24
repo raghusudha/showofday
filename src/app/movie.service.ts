@@ -7,9 +7,9 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export default class MovieService {
-  private movieUrl = 'http://localhost:3000/api/movies';
-  private customerUrl = 'http://localhost:3000/api/customers';
-  private bookingUrl='http://localhost:3000/api/bookings';
+  private movieUrl = 'http://192.168.1.12:3000/api/movies';
+  private customerUrl = 'http://192.168.1.12:3000/api/customers';
+  private bookingUrl='http://192.168.1.12:3000/api/bookings';
  
   movies:any=[{id:1,name:"Bahu bali 2",year:2017,image_url:"https://images-na.ssl-images-amazon.com/images/I/71q6iQTY-VL._SX466_.jpg",production_house:"ABC Movies",rating:5,type:"epic",language:"Telugu",date:"2017-09-30T18:30:00.000Z"},
   ];
@@ -29,7 +29,7 @@ bookings:any={customer_id:100,tickets:2,movie_id:355767778,movie_name:"arya",mov
     return this.http.get<[]>(this.movieUrl + "/"+id);
   }
   addBooking(booking):Observable<any>{
-    console.log(">> addBooking:" +JSON.stringify(booking));
+    
     return this.http.post(this.bookingUrl,booking);
   }
 
@@ -48,7 +48,9 @@ bookings:any={customer_id:100,tickets:2,movie_id:355767778,movie_name:"arya",mov
   return this.http.get<[]>(this.customerUrl+'/'+phone);     
 
 }
- 
+getRemoteBooking():Observable<[]>{
+  return this.http.get<[]>(this.bookingUrl);
+}
  authenticate(customer){
   return this.http.post(this.customerUrl,customer);
 }

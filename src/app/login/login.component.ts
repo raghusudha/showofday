@@ -29,9 +29,9 @@ export class LoginComponent implements OnInit {
   }
 onLogin(customer){
   
-for(var i=0;i<this.customers.length;i++) {
+  for(var i=0;i<this.customers.length;i++) {
     if((customer.email==this.customers[i].email) && (customer.password == this.customers[i].password)){
-    console.log(customer);
+  
     this.router.navigate(['/tabs/tab1']);
     if (localStorage.getItem('user')==null)
     {
@@ -39,13 +39,13 @@ for(var i=0;i<this.customers.length;i++) {
     }
     }
     else {
-      this.presentAlert();
+      
           this.email="email";
           this.password="password";
     }
-    break;
+    
     }
-   
+    
     }
     async presentAlert() {
       const alert = await this.alertController.create({
@@ -56,8 +56,15 @@ for(var i=0;i<this.customers.length;i++) {
       });
   
       await alert.present();
-  
+}
+async Alert() {
+  const alert = await this.alertController.create({
+    header: 'This is an alert message.',
+    subHeader: '',
+    message: ' Enter Correct Details',
+    buttons: ['OK']
+  });
 
-
+  await alert.present();
 }
 }

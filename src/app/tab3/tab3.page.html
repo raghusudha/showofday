@@ -5,23 +5,30 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-    
-    <ion-tabs>
-        
-        <ion-tab-bar slot="top">
-          <ion-tab-button tab="tab3" style="border-right: 1px #000 solid;" >
-            <ion-label>Completed</ion-label>
-          </ion-tab-button>
-          
-          <ion-tab-button tab="tab3">
-              <ion-label>Cancelled</ion-label>
-            </ion-tab-button>
-          </ion-tab-bar>
-          </ion-tabs>
-          
-
+  
+  <ion-tabs>
+   
+<!-- Icon top -->
+<ion-segment>
+  <ion-segment-button>
+    <ion-label>Completed</ion-label>
+    </ion-segment-button>
+  <ion-segment-button checked>
+    <ion-label (click)="onCancelled()">Cancelled</ion-label>
+  </ion-segment-button>
+  
+</ion-segment>
+    <ion-card *ngFor="let book of list">
+        <ion-item>
+       <ion-label> Movie:{{ book.movie_name}}<br>
+        City:{{ book.city}}<br>
+      Theatre:{{book.theatre}}<br>
+    Amount:{{book.amount}}<br>
+    Screen:{{book.screen}}
+    </ion-label>
+    </ion-item>
+      </ion-card>
+ </ion-tabs>
 </ion-content>
- <ion-button shape="round" color="medium" expand="full" fill="outline">Show Bookings</ion-button>
-
+<ion-button shape="round"  expand="full" fill="outline" (click)="onBookings()">Show Bookings</ion-button>
