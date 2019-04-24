@@ -4,15 +4,19 @@
   }
   ion-input{
     --placeholder-color:blue; 
-    
-    
-  }
+    }
   
- ion-title{
-    text-align: center;
+    ion-title{
+      text-align: center;
+      font-size: 20px;
+    }
+  ion-content{
+    margin:0 auto;
+    top: 5%;
   }
-
-
+  ion-label{
+    color: blue;
+  }
 ion-button {
     margin-left: 80px;  
     width:50%;                                                                                                      

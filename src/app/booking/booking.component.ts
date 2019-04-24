@@ -16,22 +16,12 @@ export class BookingComponent implements OnInit {
     tickets:0
   }
   constructor(private movieService:MovieService,private route: ActivatedRoute, private router:Router) { }
-  movies={
-    customer_id:2,
-    tickets:0,
-    movie_id:0,
-    movie_name:'',
-    movie_time:'12:50',
-    theatre:'',
-    screen:'',
-    city:'',
-    movie_date:'',
-    date:'',
-    amount:'',
-    ticket_price:0
-    }
 
-  ngOnInit() {
+ngOnInit() {
+    this.movie={
+      image_url:'',
+      name:'',
+    }
     this.sub = this.route.params.subscribe(params => {
     this.id = +params['id']; // (+) converts string 'id' to a number
       //  console.log("id is "+this.id);
@@ -44,7 +34,7 @@ export class BookingComponent implements OnInit {
   
   amount=this.data.tickets*50
   addBooking(){
-    var amountpert:any=this.movies.ticket_price;
+    var amountpert:any=this.movie.ticket_price;
     var options = {
       description: 'Credits towards consultation',
       image: 'https://i.imgur.com/3g7nmJC.png',

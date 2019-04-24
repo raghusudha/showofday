@@ -1,31 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <h2>Connect With Us</h2>
+      Connect With Us
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
- 
-    <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="60000"
-      pager="true">
-      <ion-slide style="height:300px;" *ngFor="let banner of sliders">
-        <img src={{banner.image}}>
-      </ion-slide>
-    </ion-slides>
-  
-  
+    <ion-img style="height: 200px;" src='../../assets/h1.jpg'></ion-img>
+
+  <!-- <ion-slides #mySlider (ionSlidesDidLoad)="slidesDidLoad(mySlider)" autoplay="5000" loop="true" speed="60000"
+    pager="true">
+    <ion-slide style="height:300px;" *ngFor="let banner of sliders">
+      <img src={{banner.image}}>
+    </ion-slide>
+  </ion-slides> -->
   <ion-card>
-      <a href="https://www.facebook.com/">
-      <ion-icon name="logo-facebook" style="font-size:45px;color:blue"></ion-icon></a>
-      <a href="https://www.youtube.com/"> 
-      <ion-icon name="logo-youtube" style="font-size:45px;color:red"></ion-icon></a>
-      <a href="https://twitter.com/">
-        <ion-icon name="logo-twitter" style="font-size:45px;color:skyblue"></ion-icon></a>
-      <div padding>
-      <ion-button shape="round"   fill="outline" color="primary" (click)="onSignup()">SIGN UP</ion-button>
-      <ion-button shape="round"   fill="outline"color="success" (click)="onSignin()">SIGN IN</ion-button>
-</div>
+    <a href="https://www.facebook.com/">
+      <ion-icon name="logo-facebook" style="font-size:45px;color:blue"></ion-icon>
+    </a>
+    <a href="https://www.youtube.com/">
+      <ion-icon name="logo-youtube" style="font-size:45px;color:red"></ion-icon>
+    </a>
+    <a href="https://twitter.com/">
+      <ion-icon name="logo-twitter" style="font-size:45px;color:skyblue"></ion-icon>
+    </a>
+    <div padding>
+      <ion-button shape="round" fill="outline" color="primary" (click)="onSignup()">SIGN UP</ion-button>
+      <ion-button shape="round" fill="outline" color="success" (click)="onSignin()">SIGN IN</ion-button>
+    </div>
   </ion-card>
 </ion-content>

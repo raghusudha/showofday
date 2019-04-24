@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private movieService:MovieService,private router:Router,public alertController: AlertController) { }
   customers=[];
+  message;
+  message1;
   customer={
     name:'',
     email:'',
@@ -23,8 +25,7 @@ export class LoginComponent implements OnInit {
   email="";
   password="";
 
-
-  ngOnInit() {
+ngOnInit() {
     this.movieService.getRemoteCustomers().subscribe((result)=>(this.customers=result));
   }
 onLogin(customer){
@@ -40,8 +41,8 @@ onLogin(customer){
     }
     else {
       
-          this.email="email";
-          this.password="password";
+          this.message="Enter Email/Password";
+          // this.message1="Login Failed";
     }
     
     }
