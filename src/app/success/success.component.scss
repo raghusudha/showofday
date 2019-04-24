@@ -19,25 +19,12 @@ ion-grid {
 ion-title{
   text-align: center;
 }
-ion-row {
-  height: 100%;
-}
+
 img{
   text-align: center;
 }
 
-ion-col {
-  // border: 1px solid #488aff;
-//   background:green;
-}
-ion-button {
-  margin-left: 80px;  
-  width:50%;                                                                                                      
-}
 
-@media (min-width: 240px) and (max-width: 768px) {
-  
-  ion-col {
-      border: none;
-  }
-}
+
+
+

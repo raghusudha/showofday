@@ -20,17 +20,12 @@ ion-grid {
   background: rgb(246, 246, 246);
 }
 
-ion-row {
-  height: 100%;
-}
+
 ion-title{
   text-align: center;
 }
 
-ion-col {
-  // border: 1px solid #488aff;
-//   background:green;
-}
+
 ion-button {
  text-align: center; 
   width:40%; 
@@ -40,10 +35,5 @@ ion-card-subtitle{
   float: right;
 }
 
-@media (min-width: 240px) and (max-width: 768px) {
-  
-  ion-col {
-      border: none;
-  }
-}
+
 
